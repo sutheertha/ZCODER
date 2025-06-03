@@ -25,3 +25,5 @@ router.delete('/user/:id/bookmarks/:bookmarkId', async (req, res) => {
     );
     res.json({ message: 'Bookmark removed' });
   });
+
+module.exports = router;
