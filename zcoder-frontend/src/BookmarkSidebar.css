@@ -2,8 +2,8 @@ aside {
   height: calc(100vh - 70px);
   width: 280px;
   background: linear-gradient(45deg, #0f0f0f, #283554);
-
-  padding: 2rem 1rem;
+  
+  padding: 2rem 1rem !important;
   font-family: 'Segoe UI', sans-serif;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@ select {
   padding: 0.4rem 0.6rem;
   border: 0.5px solid #333;
   border-radius: 4px;
-  width: 80%;
+  width: 100% !important;
   transition: border 0.3s ease;
   background-color: #1a1a1a;
   color: #e3f6ff;
