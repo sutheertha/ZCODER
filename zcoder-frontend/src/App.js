@@ -9,6 +9,7 @@ import PrivateRoute from './PrivateRoute';
 import Home from './Coderoom/component/Home';
 import EditorPage from './Coderoom/component/EditorPage';
 import { Toaster } from 'react-hot-toast';
+import Homepage from './HomePage';
 
 function App() {
   return (
@@ -17,10 +18,9 @@ function App() {
         <Toaster position='top-center' />
         <div className="page">
           <Switch>
-
             <Route exact path="/">
               <Navbar />
-              <h1>HOMEPAGE</h1>
+              <Homepage />
             </Route>
             
             <Route exact path="/login">
@@ -36,12 +36,6 @@ function App() {
               <Navbar />
               <ProfilePage />
             </PrivateRoute>
-
-            <PrivateRoute exact path="/editor">
-              <Navbar />
-              <h2>code editor</h2>
-            </PrivateRoute>
-
 
             <PrivateRoute exact path="/chatroom">
               <Navbar />
