@@ -15,7 +15,7 @@ const Navbar = ({transparent = false}) => {
                     <h1 className="navbar-title-heading"> Zcoder </h1>
                     </div>
                 </div>
-                <div className="navigation links">
+                <div className="navigation-links">
                     <Link to='/'> Home </Link>
                     <Link to='/saved'> Bookmarked Questions </Link>
                     <Link to='/editor'> Code Editor </Link>
