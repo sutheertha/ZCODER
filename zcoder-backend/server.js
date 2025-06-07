@@ -2,9 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 
-const authRoutes = require('./routes/auth');
+//routes
+const authRoutes = require('./routes/Auth');
 const bookmarkRoutes = require('./routes/Bookmarks');
+const userRoutes = require('./routes/User');
+
 
 const app = express();
 
@@ -17,6 +21,8 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use('/api/auth', authRoutes);
 app.use('/api', bookmarkRoutes);
+app.use('/user', userRoutes);
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.get('/', (req, res) => res.send('API running'));
 
