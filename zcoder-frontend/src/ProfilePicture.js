@@ -15,10 +15,14 @@ const ProfilePicture = ({src}) => {
     const [currentSrc, setCurrentSrc] = useState( isValidUrl(src) ? src : defaultPhoto);
 
     useEffect(() => {
-        setCurrentSrc(isValidUrl(src) ? src : defaultPhoto);
-        const allData = JSON.parse(localStorage.currentUser)
-        allData.userPf = isValidUrl(src) ? src : defaultPhoto;
-        localStorage.setItem('currentUser', JSON.stringify(allData));
+  setCurrentSrc(isValidUrl(src) ? src : defaultPhoto);
+
+  const currentUserString = localStorage.getItem('currentUser');
+  if (currentUserString) {
+    const allData = JSON.parse(currentUserString);
+    allData.userPf = isValidUrl(src) ? src : defaultPhoto;
+    localStorage.setItem('currentUser', JSON.stringify(allData));
+  }
     }, [src]);
 
     

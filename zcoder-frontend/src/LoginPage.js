@@ -15,7 +15,8 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+    
+
     try {
       const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/login`, {
         method: 'POST',
