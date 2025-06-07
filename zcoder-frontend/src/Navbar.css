@@ -1,0 +1,148 @@
+.navbar {
+  background: linear-gradient(45deg, #0f0f0f, #222d46);
+  padding: 0rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar.transparent {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.navbar.transparent .navigation.links a {
+  color: white;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar.transparent .navigation.links a:hover {
+  color: #00cfff;
+  text-shadow: none;
+}
+
+.navbar.transparent .navigation.links a::after {
+  background: white;
+}
+
+.navbar.transparent .navigation.links a:hover::after {
+  background: #00cfff;
+}
+
+.navbar.transparent .navbar-title-heading {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+.website-title {
+  z-index: 990 !important;
+}
+
+.nav-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.website-title h1 {
+  font-size: 2.2rem;
+  background: linear-gradient(90deg, #00d8ff, #0096ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  padding: 0rem 2rem;
+}
+
+.navigation.links {
+  z-index: 990;
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation.links a {
+  color: #d1e9ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+.navigation.links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #00bfff;
+  transition: width 0.3s ease;
+}
+
+.navigation.links a:hover {
+  color: #00cfff;
+}
+
+.navigation.links a:hover::after {
+  width: 100%;
+}
+
+.zcoder-logo-container {
+  display: flex;
+  align-items: center;
+  
+}
+
+.zcoder-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px #00d8ff);
+}
+
+.logout-button {
+  margin-top: -0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .navigation.links {
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: #121212;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 60%;
+    padding: 1.5rem;
+    display: none;
+  }
+
+  .navigation.links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background: #00cfff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}

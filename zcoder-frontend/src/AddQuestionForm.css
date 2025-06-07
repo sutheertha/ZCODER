@@ -1,0 +1,129 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(10, 10, 20, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.add-question-form {
+  background: linear-gradient(135deg, #111822, #1f293a);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #cfefff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 0 25px rgba(0, 216, 255, 0.2);
+  width: 90%;
+  max-width: 950px;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+.add-question-form h2 {
+  background: linear-gradient(to right, #00d8ff, #00cfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.form-left,
+.form-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.add-question-form .field-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.field-group label {
+  width: 35%;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #79cfff;
+  white-space: nowrap;
+}
+
+.field-group input {
+  width: 65%;
+  background-color: #1a1f2b;
+  border: 1px solid #2c3e50;
+  color: #e3f6ff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', sans-serif;
+  transition: border 0.3s ease;
+  margin-top: 0.7rem;
+}
+
+.field-group input:focus {
+  outline: none;
+  border: 1px solid #00d8ff;
+}
+
+.form-right label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #79cfff;
+}
+
+.form-right textarea {
+  width: 100%;
+  background-color: #1a1f2b;
+  border: 1px solid #2c3e50;
+  color: #e3f6ff;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', sans-serif;
+  resize: vertical;
+  transition: border 0.3s ease;
+}
+
+.form-right textarea:focus {
+  outline: none;
+  border: 1px solid #00d8ff;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.form-buttons button {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  background: #00cfff;
+  color: #000;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form-buttons button:hover {
+  background: #0096ff;
+}

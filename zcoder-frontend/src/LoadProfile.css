@@ -1,0 +1,54 @@
+.profile-display-details {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+
+.detail-section h2 {
+  color: #22d3ee;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 0.5rem;
+  margin-top: 0 !important;
+}
+
+.detail-item {
+  display: flex;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #cbd5e1;
+  min-width: 150px;
+  margin-right: 1rem;
+}
+
+.detail-value {
+  flex: 1;
+  color: #e2e8f0;
+  word-break: break-word;
+}
+
+.detail-value.link {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.detail-value.link:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .detail-item {
+    flex-direction: column;
+  }
+  
+  .detail-label {
+    margin-bottom: 0.5rem;
+  }
+}
