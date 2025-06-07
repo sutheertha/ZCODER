@@ -18,7 +18,6 @@ const Navbar = ({transparent = false}) => {
                 <div className="navigation-links">
                     <Link to='/'> Home </Link>
                     <Link to='/saved'> Bookmarked Questions </Link>
-                    <Link to='/editor'> Code Editor </Link>
                     <Link to='/chatroom'> Collaborate </Link>
                     {currentUser ? (
                     <>
